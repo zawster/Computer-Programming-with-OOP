@@ -18,9 +18,9 @@ int test1(string str,int x){
 		}
 			count1 +=1;
 		}
-				
+
 	if(count1==str.length()){
-		istringstream (temp)>>x;		
+		istringstream (temp)>>x;
 	}
 				return x;
 }/////////////////////////////////////////////////			test2
@@ -38,9 +38,9 @@ int test2(string str,int y){
 					}
 						count2 +=1;
 					}
-				
+
 	if(count2==str.length()){
-		istringstream (temp)>>y;		
+		istringstream (temp)>>y;
 	}
 	return y;
 }
@@ -54,7 +54,7 @@ class Date_and_Time{
 		int i,j;
 	public:												//    	public
 		   Date_and_Time(){
-		   	hr=20; min=52; sec=50; 
+		   	hr=20; min=52; sec=50;
 		   	date=30; month=03; year=2018;
 		   cout<<"Constructor is overloaded "<<endl;
 		   	}
@@ -94,7 +94,7 @@ class Date_and_Time{
 			int get_sec()		//	6
 			{
 				return sec;
-			}//////////////////////	
+			}//////////////////////
 			void modify_hr(int h)	//	7
 			{
 				hr=h;
@@ -141,7 +141,7 @@ class Date_and_Time{
 			int get_year()	//	15
 			{
 				return year;
-			}//////////////////////	
+			}//////////////////////
 			void modify_date(int d)	//	16
 			{
 				if(d>31){
@@ -199,9 +199,9 @@ class Date_and_Time{
 				month=test2(str2,month);
 				year=test2(str2,year);
 				if(date>31 || month>12)
-	                cout<<"You Enter invalid date:"<<endl;	
+	                cout<<"You Enter invalid date:"<<endl;
 			}
-			
+
 			void short_Date(){		//    22   short date
 				if(date>31 || month>12){
 					cout<<"Your date is invalid "<<endl;
@@ -260,7 +260,7 @@ class Date_and_Time{
 				        break;
 					    }
 				}
-			
+
 				cout<<endl;
 			}
 			~Date_and_Time()
@@ -275,34 +275,34 @@ int main(){
 	d1.set_min(16);
 	d1.set_sec(45);
 	///			modify time
-//	d1.modify_hr(8);
-//	d1.modify_min(32);
-//	d1.modify_sec(56);
+	d1.modify_hr(8);
+	d1.modify_min(32);
+	d1.modify_sec(56);
 	///			get time
-//	cout<<d1.get_hr()<<endl;
-//	cout<<d1.get_min()<<endl;
-//	cout<<d1.get_sec()<<endl;
+	cout<<d1.get_hr()<<endl;
+	cout<<d1.get_min()<<endl;
+	cout<<d1.get_sec()<<endl;
 //	/////////////////////		set  date
 	d1.set_date(27);
 	d1.set_month(3);
 	d1.set_year(2017);
 	///			modify  date
-//	d1.modify_date(30);
-//	d1.modify_month(10);
-//	d1.modify_year(2018);
+	d1.modify_date(30);
+	d1.modify_month(10);
+	d1.modify_year(2018);
 	///							get	date
-//	cout<<d1.get_date()<<endl;
-//	cout<<d1.get_month()<<endl;
-//	cout<<d1.get_year()<<endl;
-//	////////////////////
+	cout<<d1.get_date()<<endl;
+	cout<<d1.get_month()<<endl;
+	cout<<d1.get_year()<<endl;
+	////////////////////
 	//////////////////////      full and short time
-//	d1.get_full_time();
+	d1.get_full_time();
 	d1.short_Time();
-//	//////////////////////		full and short date
-//	d1.get_full_date();
+	//////////////////////		full and short date
+	d1.get_full_date();
 	d1.short_Date();
 	///////////////////////		long date and time
 	d1.long_Date_and_Time();
 	//////////////////////		English Date
-	d1.english_date();	
+	d1.english_date();
 }
